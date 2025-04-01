@@ -74,9 +74,6 @@ const CheckPasswordPage = () => {
         <div className='bg-white w-full max-w-md  rounded overflow-hidden p-4 mx-auto'>
 
             <div className='w-fit mx-auto mb-2 flex justify-center items-center flex-col'>
-                {/* <PiUserCircle
-                  size={80}
-                /> */}
                 <Avatar
                   width={70}
                   height={70}
@@ -90,12 +87,12 @@ const CheckPasswordPage = () => {
               
 
           <div className='flex flex-col gap-1'>
-                <label htmlFor='password'>Password :</label>
+                <label htmlFor='password'>Mật khẩu:</label>
                 <input
                   type='password'
                   id='password'
                   name='password'
-                  placeholder='enter your password' 
+                  placeholder='Nhập mật khẩu...' 
                   className='bg-slate-100 px-2 py-1 focus:outline-primary'
                   value={data.password}
                   onChange={handleOnChange}
@@ -106,12 +103,12 @@ const CheckPasswordPage = () => {
               <button
                className='bg-primary text-lg  px-4 py-1 hover:bg-secondary rounded mt-2 font-bold text-white leading-relaxed tracking-wide'
               >
-                Login
+                Đăng nhập
               </button>
 
           </form>
 
-          <p className='my-3 text-center'><Link to={"/forgot-password"} className='hover:text-primary font-semibold'>Forgot password ?</Link></p>
+          <p className='my-3 text-center'><Link to={"/forgot-password"} className='hover:text-primary font-semibold'>Quên mật khẩu ?</Link></p>
         </div>
     </div>
   )

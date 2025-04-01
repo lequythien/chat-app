@@ -12,7 +12,7 @@ async function checkPassword(request,response){
 
         if(!verifyPassword){
             return response.status(400).json({
-                message : "Please check password",
+                message : "Vui lòng kiểm tra mật khẩu",
                 error : true
             })
         }
@@ -30,7 +30,7 @@ async function checkPassword(request,response){
         }
 
         return response.cookie('token',token,cookieOptions).status(200).json({
-            message : "Login successfully",
+            message : "Đăng nhập thành công",
             token : token,
             success :true
         })
