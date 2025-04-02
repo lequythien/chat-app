@@ -80,8 +80,8 @@ const Home = () => {
           !basePath ? "hidden" : "lg:flex"
         }`}
       >
-        <div>
-          <img src={logo} width={250} alt="logo" />
+        <div className="bouncing-logo">
+          <img src={logo} width={150} alt="logo" />
         </div>
         <p className="text-lg mt-2 text-slate-500">
           Chọn người dùng để gửi tin nhắn!

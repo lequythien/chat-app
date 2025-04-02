@@ -10,7 +10,7 @@ import { FaVideo } from "react-icons/fa6";
 import uploadFile from "../helpers/uploadFile";
 import { IoClose } from "react-icons/io5";
 import Loading from "./Loading";
-import backgroundImage from "../assets/wallapaper.jpeg";
+import backgroundImage from "../assets/bg-chat.png";
 import { IoMdSend } from "react-icons/io";
 import moment from "moment";
 
@@ -194,7 +194,7 @@ const MessagePage = () => {
 
         <div>
           <button className="cursor-pointer hover:text-primary">
-            <HiDotsVertical />
+            {/* <HiDotsVertical /> */}
           </button>
         </div>
       </header>
@@ -206,7 +206,7 @@ const MessagePage = () => {
             <div
               className={`p-1 py-1 rounded w-fit max-w-[280px] md:max-w-sm lg:max-w-md ${
                 user._id === msg?.msgByUserId
-                  ? "ml-auto bg-teal-100"
+                  ? "ml-auto bg-teal-200"
                   : "bg-white"
               }`}
             >
@@ -227,7 +227,7 @@ const MessagePage = () => {
                 )}
               </div>
               <p className="px-2">{msg.text}</p>
-              <p className="text-xs ml-auto w-fit">
+              <p className="text-xs font-medium ml-auto pt-1 w-fit">
                 {moment(msg.createdAt).format("hh:mm")}
               </p>
             </div>
@@ -361,7 +361,7 @@ const MessagePage = () => {
         <form className="h-full w-full flex gap-2" onSubmit={handleSendMessage}>
           <input
             type="text"
-            placeholder="Type here message..."
+            placeholder="Nhập tin nhắn..."
             className="py-1 px-4 outline-none w-full h-full"
             value={message.text}
             onChange={handleOnChange}
